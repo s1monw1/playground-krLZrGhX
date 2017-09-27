@@ -1,4 +1,4 @@
-title: Simple Kotlin Template
+title: Kotlin Sealed Classes In Action
 plan:
-- title: Kotlin Snippet
-  statement: statement.md
+- title: Kotlin Sealed Classes In Action
+  statement: sealed.md
