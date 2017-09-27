@@ -8,6 +8,8 @@ _Disclaimer: My articles are published under
 
 Feel free to share.
 
+### Intro
+
 'Sealed Classes' is a feature of the <b>Kotlin</b> programming language, which is also available in Scala for example. Although many people haven't heard of it yet, it's a quite simple feature worth knowing, which I'm going to explain in the following.
 
 ### Feature Explanation
