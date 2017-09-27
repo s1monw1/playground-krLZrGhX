@@ -32,7 +32,7 @@ Kotlin's sealed classes are some kind of "extension" of plain enums: As opposed 
 
 The main advantage of sealed classes reveals itself if it's used in `when` expressions. Let's compare a normal class hierarchy to one of a sealed class handled in a when. First, we'll create a hierarchy of `Mammal`s and then put it into a method using a ``when`` statement:
 
-```kotlin
+```kotlin runnable
 fun main(args: Array<String>) {
 
     greetMammal(Cat("Lucy")).toConsole()
@@ -90,7 +90,7 @@ fun greetMammal(mammal: Mammal): String {
     when (mammal) {
         is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"
         is Cat -> return "Hello ${mammal.name}"
-// `else` clause not required, all the cases covered
+        // `else` clause not required
     }
 }
 
