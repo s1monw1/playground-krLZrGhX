@@ -1,5 +1,13 @@
 ## Sealed Classes in Kotlin 
 
+
+_Disclaimer: My articles are published under 
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="_blank">"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"</a>._
+
+© Copyright: Simon Wirtz, 2017
+
+Feel free to share.
+
 'Sealed Classes' is a feature of the <b>Kotlin</b> programming language, which is also available in Scala for example. Although many people haven't heard of it yet, it's a quite simple feature worth knowing, which I'm going to explain in the following.
 
 ### Feature Explanation
