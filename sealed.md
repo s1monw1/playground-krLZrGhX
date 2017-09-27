@@ -104,7 +104,7 @@ We can simply omit the `else` branch since the compiler can verify that all poss
 
 That's it. In conclusion really simple and handy, isn't it? Have fun trying it yourself!
 
-Finally, if you want to read about sealed classes in more detail I recommend the book <a target="_blank" href="https://www.amazon.de/gp/product/1617293296/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1617293296&linkCode=as2&tag=simonwirtzde-21&linkId=7a0cd03461f738a8c428fb9b7a3af77a">Kotlin in Action</a><img src="//ir-de.amazon-adsystem.com/e/ir?t=simonwirtzde-21&l=am2&o=3&a=1617293296" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />to you!
+Finally, if you want to read about sealed classes or any other feature in more detail I recommend the book <a target="_blank" href="https://www.amazon.de/gp/product/1617293296/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1617293296&linkCode=as2&tag=simonwirtzde-21&linkId=7a0cd03461f738a8c428fb9b7a3af77a">Kotlin in Action</a>.<img src="//ir-de.amazon-adsystem.com/e/ir?t=simonwirtzde-21&l=am2&o=3&a=1617293296" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-Simon
+Cheers, Simon
 
