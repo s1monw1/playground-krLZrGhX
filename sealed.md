@@ -115,6 +115,7 @@ fun greetMammal(mammal: Mammal): String {
     when (mammal) {
         is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"
     }
+    return "will not compile"
 }
 
 ````
