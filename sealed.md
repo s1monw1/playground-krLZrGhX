@@ -75,29 +75,6 @@ sealed class Mammal(val name: String)
 The code example from above now looks as follows:
 
 ```kotlin runnable
-sealed class Mammal(val name: String)
-class Cat(catName: String) : Mammal(catName)
-class Human(humanName: String, val job: String) : Mammal(humanName)
-
-fun greetMammal(mammal: Mammal): String {
-    when (mammal) {
-        is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"
-        is Cat -> return "Hello ${mammal.name}"
-        // `else` clause not required
-    }
-}
-
-````
-
-We can simply omit the `else` branch since the compiler can verify that all possible cases are covered. Only the subclasses defined _in the file_ of the `sealed` class exist, without exception. 
-
-That's it. In conclusion really simple and handy, isn't it? Have fun trying it yourself!
-
-#### What if a branch for at least on subsclass is being omitted?
-
-Let's see what happens if we don't add a `when` case for every subclass of our sealed class, e.g. do not have a `Cat` case: 
-
-```kotlin runnable
 fun main(args: Array<String>) {
 
     greetMammal(Cat("Lucy")).toConsole()
@@ -114,10 +91,34 @@ class Human(humanName: String, val job: String) : Mammal(humanName)
 fun greetMammal(mammal: Mammal): String {
     when (mammal) {
         is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"
+        is Cat -> return "Hello ${mammal.name}"
+        // `else` clause not required
+    }
+}
+
+//For debugging only
+fun String.toConsole() = println(this)
+````
+
+We can simply omit the `else` branch since the compiler can verify that all possible cases are covered. Only the subclasses defined _in the file_ of the `sealed` class exist, without exception. 
+
+#### What if a branch for at least on subsclass is being omitted?
+
+Let's see what happens if we don't add a `when` case for every subclass of our sealed class, e.g. do not have a `Cat` case: 
+
+```kotlin runnable
+sealed class Mammal(val name: String)
+class Cat(catName: String) : Mammal(catName)
+class Human(humanName: String, val job: String) : Mammal(humanName)
+
+fun greetMammal(mammal: Mammal): String {
+    when (mammal) {
+        is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"
     }
 }
 
 ````
+
 As one might expect, the compiler complains with a comprehensive error message: "Error: 'when' expression must be exhaustive, add necessary 'is Cat' branch or 'else' branch instead".
 
 That's it. In conclusion really simple and handy, isn't it? Have fun trying it yourself!
